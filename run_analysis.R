@@ -93,9 +93,6 @@ finaldata <- rbind(testdata, traindata) %>% select( -activity )
 finaldata <- mutate(finaldata, subject = as.factor(finaldata$subject))
 
 # Write the data
-setwd("../")
-if(!dir.exists("./results")) dir.create("./results")
-setwd("./results")
 write.table(finaldata, "Mean and StdDev for Activity Subject.txt")
 
 # Create a second, independent tidy data set with the average of each 
